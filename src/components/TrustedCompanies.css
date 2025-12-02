@@ -1,0 +1,130 @@
+.trusted-companies-section {
+    padding: 3rem 0 1rem 0;
+    background: var(--color-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.trusted-companies-label {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.companies-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    z-index: 1;
+}
+
+.companies-slider {
+    display: flex;
+    gap: 4rem;
+    width: fit-content;
+    align-items: center;
+    animation: slideCompanies 40s linear infinite;
+}
+
+@keyframes slideCompanies {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 2rem));
+    }
+}
+
+.company-item {
+    flex-shrink: 0;
+    min-width: fit-content;
+}
+
+.company-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.company-item:hover .company-logo {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.company-name-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+
+.company-logo-svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    width: auto;
+}
+
+.company-logo-svg svg {
+    height: 100%;
+    width: auto;
+    max-width: 120px;
+    fill: currentColor;
+    color: var(--color-text);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .trusted-companies-section {
+        padding: 2rem 0;
+    }
+
+    .trusted-companies-label {
+        font-size: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .companies-slider {
+        gap: 3rem;
+        animation-duration: 30s;
+    }
+
+    .company-logo {
+        padding: 0.75rem 1.5rem;
+    }
+
+    .company-logo-svg {
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .companies-slider {
+        gap: 2rem;
+    }
+
+    .company-logo {
+        padding: 0.5rem 1rem;
+    }
+
+    .company-logo-svg {
+        height: 24px;
+    }
+}

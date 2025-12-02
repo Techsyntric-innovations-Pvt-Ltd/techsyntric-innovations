@@ -1,0 +1,118 @@
+.about {
+    background-color: #0f0f0f;
+    overflow: hidden;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+}
+
+.image-wrapper {
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    position: relative;
+    height: 500px;
+}
+
+.placeholder-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text-muted);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: 30px;
+    right: -30px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    animation: float 5s infinite ease-in-out;
+}
+
+.experience-badge .years {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1;
+}
+
+.experience-badge .text {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.about-content .section-title {
+    text-align: left;
+    font-size: 3rem;
+}
+
+.about-text {
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.value-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.value-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-secondary);
+}
+
+.value-card p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+@media (max-width: 968px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        order: 2;
+    }
+
+    .experience-badge {
+        right: 10px;
+    }
+
+    .about-content {
+        order: 1;
+        text-align: center;
+    }
+
+    .about-content .section-title {
+        text-align: center;
+    }
+}
