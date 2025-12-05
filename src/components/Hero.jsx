@@ -33,6 +33,43 @@ const CountUp = ({ end, duration = 2000, suffix = '' }) => {
     return <span>{count}{suffix}</span>;
 };
 
+const Typewriter = ({ words, wait = 3000 }) => {
+    const [index, setIndex] = useState(0);
+    const [subIndex, setSubIndex] = useState(0);
+    const [reverse, setReverse] = useState(false);
+
+    useEffect(() => {
+        if (index >= words.length) return;
+
+        const currentWord = words[index];
+
+        if (!reverse && subIndex === currentWord.length) {
+            const timeout = setTimeout(() => {
+                setReverse(true);
+            }, wait);
+            return () => clearTimeout(timeout);
+        }
+
+        if (reverse && subIndex === 0) {
+            setReverse(false);
+            setIndex((prev) => (prev + 1) % words.length);
+            return;
+        }
+
+        const timeout = setTimeout(() => {
+            setSubIndex((prev) => prev + (reverse ? -1 : 1));
+        }, reverse ? 75 : 150);
+
+        return () => clearTimeout(timeout);
+    }, [subIndex, index, reverse, words, wait]);
+
+    return (
+        <span>
+            {words[index].substring(0, subIndex)}
+        </span>
+    );
+};
+
 const Hero = () => {
     const [animationData, setAnimationData] = useState(null);
 
@@ -52,7 +89,9 @@ const Hero = () => {
                     <h1 className="hero-title animate-fade-up animate-delay-1">
                         Transform Your Business
                         <br />
-                        With <span className="text-gradient">Smart Solutions</span>
+                        With <span className="text-gradient">
+                            <Typewriter words={["Smart Solutions", "Digital Innovation", "Creative Strategy", "Future Tech"]} />
+                        </span>
                     </h1>
 
                     <p className="hero-description animate-fade-up animate-delay-2">
@@ -60,16 +99,7 @@ const Hero = () => {
                         and position your business at the forefront of innovation in the modern era.
                     </p>
 
-                    <div className="hero-cta animate-fade-up animate-delay-3">
-                        <button className="btn btn-primary btn-large">
-                            Get Started
-                            <span className="btn-arrow">→</span>
-                        </button>
-                        <button className="btn btn-outline btn-large">
-                            Watch Demo
-                            <span className="play-icon">▶</span>
-                        </button>
-                    </div>
+
 
                     <div className="hero-stats animate-fade-up animate-delay-4">
                         <div className="stat-item">

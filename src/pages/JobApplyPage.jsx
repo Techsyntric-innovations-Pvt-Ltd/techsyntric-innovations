@@ -89,7 +89,7 @@ const JobApplyPage = () => {
                                         name="fullName"
                                         value={formData.fullName}
                                         onChange={handleChange}
-                                        placeholder="John Doe"
+                                        placeholder="Enter your full name"
                                         required
                                     />
                                 </div>
@@ -100,7 +100,7 @@ const JobApplyPage = () => {
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
-                                        placeholder="john@example.com"
+                                        placeholder="Enter your email"
                                         required
                                     />
                                 </div>
@@ -111,7 +111,7 @@ const JobApplyPage = () => {
                                         name="phone"
                                         value={formData.phone}
                                         onChange={handleChange}
-                                        placeholder="+1 (555) 000-0000"
+                                        placeholder="Enter your phone number"
                                         required
                                     />
                                 </div>
@@ -122,7 +122,7 @@ const JobApplyPage = () => {
                                         name="experience"
                                         value={formData.experience}
                                         onChange={handleChange}
-                                        placeholder="e.g. 4"
+                                        placeholder="Enter your experience in years"
                                         min="0"
                                         required
                                     />

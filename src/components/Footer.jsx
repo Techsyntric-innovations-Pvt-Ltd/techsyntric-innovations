@@ -8,20 +8,7 @@ const Footer = () => {
             <div className="container footer-container">
                 <div className="footer-brand-section">
                     <Link to="/" className="logo">
-                        <div className="logo-icon">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16 2L2 10V22L16 30L30 22V10L16 2Z" stroke="url(#footer-logo-gradient)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M16 10V22" stroke="url(#footer-logo-gradient)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M10 13L16 16L22 13" stroke="url(#footer-logo-gradient)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M10 19L16 16L22 19" stroke="url(#footer-logo-gradient)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                <defs>
-                                    <linearGradient id="footer-logo-gradient" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
-                                        <stop stopColor="#3b82f6" />
-                                        <stop offset="1" stopColor="#8b5cf6" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </div>
+
                         <div className="logo-text-container">
                             <span className="logo-main">Tech<span className="logo-highlight">Syntric</span></span>
                             <span className="logo-sub">INNOVATIONS</span>
@@ -78,14 +65,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="footer-newsletter">
-                    <h4>Stay Updated</h4>
-                    <p>Subscribe to our newsletter for the latest tech trends and company updates.</p>
-                    <form className="newsletter-form">
-                        <input type="email" placeholder="Enter your email" />
-                        <button type="submit" className="btn btn-primary">Subscribe</button>
-                    </form>
-                </div>
+
             </div>
 
             <div className="footer-bottom">
