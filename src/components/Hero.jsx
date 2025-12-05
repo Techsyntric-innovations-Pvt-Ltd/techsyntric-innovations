@@ -2,6 +2,37 @@ import React, { useState, useEffect } from 'react';
 import Lottie from 'lottie-react';
 import './Hero.css';
 
+const CountUp = ({ end, duration = 2000, suffix = '' }) => {
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        let startTime = null;
+        let animationFrameId;
+
+        const animate = (currentTime) => {
+            if (!startTime) startTime = currentTime;
+            const progress = currentTime - startTime;
+            const percentage = Math.min(progress / duration, 1);
+
+            // Ease out function for smooth animation
+            const easeOutQuad = (t) => t * (2 - t);
+            const currentCount = Math.floor(easeOutQuad(percentage) * end);
+
+            setCount(currentCount);
+
+            if (progress < duration) {
+                animationFrameId = requestAnimationFrame(animate);
+            }
+        };
+
+        animationFrameId = requestAnimationFrame(animate);
+
+        return () => cancelAnimationFrame(animationFrameId);
+    }, [end, duration]);
+
+    return <span>{count}{suffix}</span>;
+};
+
 const Hero = () => {
     const [animationData, setAnimationData] = useState(null);
 
@@ -42,17 +73,23 @@ const Hero = () => {
 
                     <div className="hero-stats animate-fade-up animate-delay-4">
                         <div className="stat-item">
-                            <h3 className="stat-number">10+</h3>
+                            <h3 className="stat-number">
+                                <CountUp end={10} suffix="+" duration={2000} />
+                            </h3>
                             <p className="stat-label">Projects Completed</p>
                         </div>
                         <div className="stat-divider"></div>
                         <div className="stat-item">
-                            <h3 className="stat-number">98%</h3>
+                            <h3 className="stat-number">
+                                <CountUp end={98} suffix="%" duration={2000} />
+                            </h3>
                             <p className="stat-label">Client Satisfaction</p>
                         </div>
                         <div className="stat-divider"></div>
                         <div className="stat-item">
-                            <h3 className="stat-number">3+</h3>
+                            <h3 className="stat-number">
+                                <CountUp end={3} suffix="+" duration={2000} />
+                            </h3>
                             <p className="stat-label">Years Experience</p>
                         </div>
                     </div>

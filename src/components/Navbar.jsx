@@ -72,7 +72,7 @@ const Navbar = () => {
                                     </a>
                                     <div className="dropdown-menu">
                                         <a href="#services" onClick={() => scrollToSection('services')}>Services</a>
-                                        <Link to="/blog" onClick={() => setIsOpen(false)}>Blog</Link>
+                                        <Link to="#" onClick={() => setIsOpen(false)}>Blog</Link>
                                     </div>
                                 </div>
                                 <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
