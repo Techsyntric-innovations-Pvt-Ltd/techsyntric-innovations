@@ -1,9 +1,34 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 import FAQ from './FAQ';
 import NoticeBoard from './NoticeBoard';
 
+const SERVICE_ID = "service_87qfzmm";
+const TEMPLATE_ID = "template_vt0cl9v";
+const PUBLIC_KEY = "7VyedEseXgLJy527f";
+
 const Contact = () => {
+    const formRef = useRef(null);
+    const [isSending, setIsSending] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setIsSending(true);
+
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+            .then(() => {
+                setIsSending(false);
+                alert("Message sent successfully!");
+                formRef.current.reset();
+            })
+            .catch((error) => {
+                console.error("EmailJS Error:", error);
+                setIsSending(false);
+                alert("Something went wrong!");
+            });
+    };
+
     return (
         <section id="contact" className="contact section">
             <div className="container">
@@ -26,22 +51,55 @@ const Contact = () => {
                             <h3>📞 Phone</h3>
                             <p>+1 (555) 123-4567</p>
                         </div>
-
-
                     </div>
 
-                    <form className="contact-form glass animate-fade-up animate-delay-1">
+                    {/* CONTACT FORM */}
+                    <form
+                        ref={formRef}
+                        onSubmit={handleSubmit}
+                        className="contact-form glass animate-fade-up animate-delay-1"
+                    >
                         <h3>Send us a message</h3>
+
+                        {/* Your Name */}
                         <div className="form-group">
-                            <input type="text" placeholder="Your Name" required />
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Your Name"
+                                required
+                            />
                         </div>
+
+                        {/* Your Email */}
                         <div className="form-group">
-                            <input type="email" placeholder="Your Email" required />
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Your Email"
+                                required
+                            />
                         </div>
+
+                        {/* Your Message */}
                         <div className="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <textarea
+                                name="message"
+                                placeholder="Your Message"
+                                rows="5"
+                                required
+                            ></textarea>
                         </div>
-                        <button type="submit" className="btn btn-primary">Send Message</button>
+
+                        {/* Hidden input for title because your template needs it */}
+                        <input type="hidden" name="title" value="New Contact Message" />
+
+                        {/* Hidden time field (emailJS template requires it) */}
+                        <input type="hidden" name="time" value={new Date().toLocaleString()} />
+
+                        <button type="submit" className="btn btn-primary">
+                            {isSending ? "Sending..." : "Send Message"}
+                        </button>
                     </form>
                 </div>
 
@@ -55,6 +113,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
     );

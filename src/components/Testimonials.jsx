@@ -35,6 +35,11 @@ const Testimonials = () => {
                     {testimonials.map((item, index) => (
                         <div key={index} className="testimonial-card glass animate-fade-up" style={{ animationDelay: `${index * 0.2}s` }}>
                             <div className="quote-icon">❝</div>
+                            <div className="stars">
+                                {[...Array(5)].map((_, i) => (
+                                    <span key={i} className="star">★</span>
+                                ))}
+                            </div>
                             <p className="testimonial-content">{item.content}</p>
                             <div className="testimonial-author">
                                 <div className="avatar">{item.avatar}</div>

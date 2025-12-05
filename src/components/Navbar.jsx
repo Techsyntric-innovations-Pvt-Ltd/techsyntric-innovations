@@ -42,20 +42,7 @@ const Navbar = () => {
             <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
                 <div className="container navbar-container">
                     <Link to="/" className="logo">
-                        <div className="logo-icon">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16 2L2 10V22L16 30L30 22V10L16 2Z" stroke="url(#logo-gradient)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M16 10V22" stroke="url(#logo-gradient)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M10 13L16 16L22 13" stroke="url(#logo-gradient)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M10 19L16 16L22 19" stroke="url(#logo-gradient)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                <defs>
-                                    <linearGradient id="logo-gradient" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
-                                        <stop stopColor="#3b82f6" />
-                                        <stop offset="1" stopColor="#8b5cf6" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </div>
+
                         <div className="logo-text-container">
                             <span className="logo-main">Tech<span className="logo-highlight">Syntric</span></span>
                             <span className="logo-sub">INNOVATIONS</span>
@@ -66,29 +53,15 @@ const Navbar = () => {
                         {isHome ? (
                             <>
                                 <a href="#hero" onClick={() => scrollToSection('hero')}>Home</a>
-                                <div className="dropdown">
-                                    <a href="#services" onClick={() => scrollToSection('services')} className="dropdown-trigger">
-                                        Services <span className="arrow">▼</span>
-                                    </a>
-                                    <div className="dropdown-menu">
-                                        <a href="#services" onClick={() => scrollToSection('services')}>Services</a>
-                                        <Link to="/blog" onClick={() => setIsOpen(false)}>Blog</Link>
-                                    </div>
-                                </div>
+                                <a href="#services" onClick={() => scrollToSection('services')}>Services</a>
+
                                 <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
                             </>
                         ) : (
                             <>
                                 <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
-                                <div className="dropdown">
-                                    <Link to="/#services" onClick={() => setIsOpen(false)} className="dropdown-trigger">
-                                        Services <span className="arrow">▼</span>
-                                    </Link>
-                                    <div className="dropdown-menu">
-                                        <Link to="/#services" onClick={() => setIsOpen(false)}>Services</Link>
-                                        <Link to="/blog" onClick={() => setIsOpen(false)}>Blog</Link>
-                                    </div>
-                                </div>
+                                <Link to="/#services" onClick={() => setIsOpen(false)}>Services</Link>
+
                                 <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
                             </>
                         )}
