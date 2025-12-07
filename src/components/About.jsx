@@ -28,11 +28,11 @@ const About = () => {
 
                         <div className="values-grid">
                             <div className="value-card glass">
-                                <h4>🎯 Mission</h4>
+                                <h4> Mission</h4>
                                 <p>To empower businesses with innovative digital solutions that drive growth.</p>
                             </div>
                             <div className="value-card glass">
-                                <h4>👁️ Vision</h4>
+                                <h4> Vision</h4>
                                 <p>To be the global standard for excellence in software development.</p>
                             </div>
                         </div>

@@ -85,32 +85,32 @@ const AboutPage = () => {
 
                     <div className="features-grid">
                         <div className="feature-box">
-                            <div className="feature-icon">⚡</div>
+                            <div className="feature-icon"></div>
                             <h4>Rapid Development</h4>
                             <p>Agile methodologies and modern frameworks enable us to deliver quality solutions faster without compromising on excellence.</p>
                         </div>
                         <div className="feature-box">
-                            <div className="feature-icon">🛡️</div>
+                            <div className="feature-icon"></div>
                             <h4>Enterprise Security</h4>
                             <p>Your data security is paramount. We implement industry-leading security practices and compliance standards in every project.</p>
                         </div>
                         <div className="feature-box">
-                            <div className="feature-icon">📈</div>
+                            <div className="feature-icon"></div>
                             <h4>Scalable Architecture</h4>
                             <p>Build for growth. Our solutions are designed to scale seamlessly as your business expands and evolves.</p>
                         </div>
                         <div className="feature-box">
-                            <div className="feature-icon">🤝</div>
+                            <div className="feature-icon"></div>
                             <h4>Dedicated Support</h4>
                             <p>24/7 technical support and maintenance ensure your systems run smoothly and issues are resolved promptly.</p>
                         </div>
                         <div className="feature-box">
-                            <div className="feature-icon">💰</div>
+                            <div className="feature-icon"></div>
                             <h4>Cost-Effective</h4>
                             <p>Maximize ROI with efficient development processes and strategic technology choices that fit your budget.</p>
                         </div>
                         <div className="feature-box">
-                            <div className="feature-icon">🔄</div>
+                            <div className="feature-icon"></div>
                             <h4>Continuous Innovation</h4>
                             <p>We stay ahead of technology trends, constantly learning and adopting new tools to keep you competitive.</p>
                         </div>
