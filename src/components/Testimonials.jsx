@@ -3,22 +3,22 @@ import './Testimonials.css';
 
 const testimonials = [
     {
-        name: 'Sarah Johnson',
+        name: 'Priya Sharma',
         role: 'CEO, TechFlow',
         content: 'TechSyntric Innovations transformed our digital presence. Their team is professional, skilled, and incredibly creative. Highly recommended!',
-        avatar: 'S'
+        avatar: 'P'
     },
     {
-        name: 'Michael Chen',
+        name: 'Rahul Verma',
         role: 'CTO, DataSystems',
         content: 'The AI solution they built for us increased our efficiency by 40%. The code quality is top-notch and the support is exceptional.',
-        avatar: 'M'
+        avatar: 'R'
     },
     {
-        name: 'Emily Davis',
+        name: 'Anjali Gupta',
         role: 'Founder, EcoStart',
         content: 'Working with TechSyntric was a breeze. They understood our vision perfectly and delivered a website that exceeded our expectations.',
-        avatar: 'E'
+        avatar: 'A'
     }
 ];
 
