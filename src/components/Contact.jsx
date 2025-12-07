@@ -41,15 +41,15 @@ const Contact = () => {
                     <div className="contact-info animate-fade-up">
                         <div className="info-item glass">
                             <h3>📍 Location</h3>
-                            <p>123 Innovation Drive, Tech City, TC 90210</p>
+                            <p>Ratnagiri bhopal Madhya Pradesh, India</p>
                         </div>
                         <div className="info-item glass">
                             <h3>📧 Email</h3>
-                            <p>hello@infoquick.com</p>
+                            <p>techsyntricinnovations@gmail.com</p>
                         </div>
                         <div className="info-item glass">
                             <h3>📞 Phone</h3>
-                            <p>+1 (555) 123-4567</p>
+                            <p>+91 9263066822</p>
                         </div>
                     </div>
 

@@ -16,7 +16,7 @@ const NoticeBoard = () => {
             title: 'We are Hiring!',
             date: '2025-12-01',
             content: 'Looking for Frontend React Developers.',
-            link: '/careers/apply?job=Frontend React Developer',
+            link: '#',
             linkText: 'Apply Now'
         },
         {
@@ -45,7 +45,8 @@ const NoticeBoard = () => {
                         <div className="notice-top">
                             {/* <span className="notice-date">{notice.date}</span> */}
                         </div>
-                        <h4>{notice.title} {notice.id !== 2 && notice.id !== 4 && <span className="new-badge">New</span>}</h4>
+                        <h4>{notice.title} {notice.id !== 2 && notice.id !== 4 && <span className="new-badge">New</span>}
+                            {notice.id === 2 && <span className="expired-badge">Expired</span>}</h4>
                         <p>{notice.content}</p>
                         {notice.link && (
                             <a href={notice.link} className="notice-link">{notice.linkText} &rarr;</a>
