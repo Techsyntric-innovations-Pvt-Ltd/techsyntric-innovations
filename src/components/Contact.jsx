@@ -41,7 +41,7 @@ const Contact = () => {
                     <div className="contact-info animate-fade-up">
                         <div className="info-item glass">
                             <h3>📍 Location</h3>
-                            <p>Ratnagiri bhopal Madhya Pradesh, India</p>
+                            <p>Bhopal Madhya Pradesh, India</p>
                         </div>
                         <div className="info-item glass">
                             <h3>📧 Email</h3>

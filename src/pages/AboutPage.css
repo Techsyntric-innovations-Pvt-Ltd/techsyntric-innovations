@@ -98,6 +98,7 @@
     margin-bottom: 0.5rem;
     background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -173,8 +174,8 @@
 .feature-box {
     padding: 2rem;
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     text-align: center;
 }
@@ -216,8 +217,8 @@
 .value-card {
     padding: 2.5rem;
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     position: relative;
 }

@@ -44,8 +44,8 @@ const Footer = () => {
                 <div className="footer-links-section">
                     <div className="link-group">
                         <h4>Company</h4>
-                        <Link to="/#about">About Us</Link>
-                        <Link to="/#services">Our Services</Link>
+                        <Link to="/about">About Us</Link>
+                        <Link to="/#Services">Our Services</Link>
                         <Link to="/contact">Careers</Link>
                         <Link to="/contact">Contact</Link>
                     </div>
