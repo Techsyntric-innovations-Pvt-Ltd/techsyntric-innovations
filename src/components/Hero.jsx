@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Lottie from 'lottie-react';
+import HeroBackground from './HeroBackground';
 import './Hero.css';
 
 const CountUp = ({ end, duration = 2000, suffix = '' }) => {
@@ -71,17 +71,9 @@ const Typewriter = ({ words, wait = 3000 }) => {
 };
 
 const Hero = () => {
-    const [animationData, setAnimationData] = useState(null);
-
-    useEffect(() => {
-        fetch('/Web Development.json')
-            .then(res => res.json())
-            .then(data => setAnimationData(data))
-            .catch(err => console.error("Failed to load animation:", err));
-    }, []);
-
     return (
         <section id="hero" className="hero">
+            <HeroBackground />
             <div className="container hero-container">
                 <div className="hero-content">
 
@@ -126,20 +118,7 @@ const Hero = () => {
                 </div>
 
                 <div className="hero-visual animate-fade-up animate-delay-2">
-                    <div className="visual-wrapper">
-
-
-                        <div className="center-graphic">
-                            {animationData ? (
-                                <Lottie animationData={animationData} loop={true} className="hero-lottie" />
-                            ) : (
-                                <>
-
-                                    <div className="graphic-icon"></div>
-                                </>
-                            )}
-                        </div>
-                    </div>
+                    {/* Visual content removed as per request */}
                 </div>
             </div>
         </section>

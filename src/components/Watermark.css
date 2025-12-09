@@ -16,8 +16,8 @@
     /* Responsive large size */
     font-weight: 900;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.03);
-    /* Very subtle */
+    color: rgba(0, 0, 0, 0.05);
+    /* Very subtle - Dark for Light Theme */
     /* white-space: nowrap; Removed to allow line break */
     letter-spacing: 10px;
     text-align: center;

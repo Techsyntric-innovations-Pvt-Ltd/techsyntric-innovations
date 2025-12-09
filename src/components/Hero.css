@@ -72,17 +72,19 @@
 
 /* Container */
 .hero-container {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
     position: relative;
     z-index: 1;
 }
 
 /* Content */
 .hero-content {
-    max-width: 650px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .hero-badge {
@@ -150,12 +152,13 @@
 .hero-stats {
     display: flex;
     align-items: center;
-    gap: 2rem;
-    margin-top: 2rem;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 4rem;
 }
 
 .stat-item {
-    text-align: left;
+    text-align: center;
 }
 
 .stat-number {
@@ -180,8 +183,7 @@
 
 /* Visual Section */
 .hero-visual {
-    position: relative;
-    height: 600px;
+    display: none;
 }
 
 .visual-wrapper {

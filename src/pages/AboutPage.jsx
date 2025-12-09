@@ -35,43 +35,17 @@ const AboutPage = () => {
                         </div>
                         <div className="stats-grid">
                             <div className="stat-card glass">
-                                <h3>500+</h3>
+                                <h3>10+</h3>
                                 <p>Projects Delivered</p>
                             </div>
                             <div className="stat-card glass">
-                                <h3>200+</h3>
+                                <h3>10+</h3>
                                 <p>Happy Clients</p>
                             </div>
                             <div className="stat-card glass">
-                                <h3>50+</h3>
+                                <h3>5+</h3>
                                 <p>Team Members</p>
                             </div>
-                            <div className="stat-card glass">
-                                <h3>15+</h3>
-                                <p>Countries Served</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Mission & Vision */}
-            <section className="section mission-vision">
-                <div className="container">
-                    <div className="mv-grid">
-                        <div className="mv-card glass">
-                            <div className="mv-icon"></div> {/*for icons */}
-                            <h3>Our Mission</h3>
-                            <p>
-                                To empower businesses with innovative technology solutions that drive growth, efficiency, and competitive advantage in the digital age. We strive to make complex technology accessible and valuable for organizations of all sizes.
-                            </p>
-                        </div>
-                        <div className="mv-card glass">
-                            <div className="mv-icon"></div>   {/*for icons */}
-                            <h3>Our Vision</h3>
-                            <p>
-                                To be the global leader in digital transformation, recognized for excellence, innovation, and our unwavering commitment to client success. We envision a future where technology seamlessly enhances every aspect of business.
-                            </p>
                         </div>
                     </div>
                 </div>
