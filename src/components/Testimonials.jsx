@@ -43,19 +43,20 @@ const Testimonials = () => {
         const slider = sliderRef.current;
         if (!slider) return;
 
-        const scrollAmount = 400 + 48; // Card width (400) + Gap (3rem ~ 48px)
-
         const interval = setInterval(() => {
-            if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - scrollAmount) {
-                // Approximate reset to start to maintain flow if needed, 
-                // but for simple "slide... stop", just scrolling smoothly is fine.
-                // Or smooth rewind: slider.scrollTo({ left: 0, behavior: 'smooth' });
-                // But instantaneous loop is better:
+            const firstCard = slider.querySelector('.testimonial-card');
+            if (!firstCard) return;
+
+            const cardWidth = firstCard.offsetWidth;
+            const gap = 3 * 16; // 3rem gap assumed (approx 48px)
+            const scrollAmount = cardWidth + gap;
+
+            if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 10) { // -10 tolerance
                 slider.scrollTo({ left: 0, behavior: 'auto' });
             } else {
                 slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
             }
-        }, 3000); // 3 seconds pause ("ruk ruk ke")
+        }, 3000);
 
         return () => clearInterval(interval);
     }, []);
