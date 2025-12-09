@@ -122,48 +122,59 @@
 
 .message {
     max-width: 80%;
-    padding: 0.8rem 1rem;
-    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    border-radius: 18px;
     font-size: 0.95rem;
     line-height: 1.5;
+    word-break: break-word;
+    /* Fix overflow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .message.bot {
     align-self: flex-start;
-    background: rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    /* White bubble for clean look */
+    border: 1px solid rgba(0, 0, 0, 0.05);
     color: var(--color-text);
-    border-bottom-left-radius: 2px;
+    border-bottom-left-radius: 4px;
 }
 
 .message.user {
     align-self: flex-end;
     background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
     color: white;
-    border-bottom-right-radius: 2px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
 }
 
 .chatbot-input {
     padding: 1rem;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
     display: flex;
-    gap: 0.5rem;
+    gap: 0.8rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .chatbot-input input {
     flex: 1;
-    background: rgba(0, 0, 0, 0.05);
+    background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 0.8rem 1rem;
-    border-radius: 25px;
+    padding: 0.9rem 1.2rem;
+    border-radius: 50px;
+    /* Pillow shape */
     color: var(--color-text);
     font-family: var(--font-sans);
+    font-size: 0.95rem;
     outline: none;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
 }
 
 .chatbot-input input:focus {
     border-color: var(--color-primary);
-    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 .send-btn {

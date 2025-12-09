@@ -52,7 +52,7 @@ const Chatbot = () => {
         } else if (lowerInput.includes('service') || lowerInput.includes('web') || lowerInput.includes('app')) {
             return "We offer Web Development, Mobile App Development, and Digital Marketing services. Which one are you interested in?";
         } else if (lowerInput.includes('contact') || lowerInput.includes('email') || lowerInput.includes('phone')) {
-            return "You can reach us at contact@techsyntric.com or call us at +91 8789106328.";
+            return "You can reach us at techsyntricinnovations@gmail.com or call us at +91 9263066822.";
         } else if (lowerInput.includes('about') || lowerInput.includes('who')) {
             return "TechSyntric is a leading tech innovation company dedicated to transforming businesses with smart digital solutions.";
         } else {
