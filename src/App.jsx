@@ -7,6 +7,7 @@ import AboutPage from './pages/AboutPage';
 import BlogPage from './pages/BlogPage';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CallToAction from './components/CallToAction';
 import Watermark from './components/Watermark';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -42,6 +43,7 @@ function App() {
         </main>
         <Watermark />
         <Chatbot />
+        <CallToAction />
         <Footer />
       </div>
     </Router>

@@ -549,3 +549,14 @@
         display: flex;
     }
 }
+
+/* Appointment Button Custom Style */
+.btn-appointment {
+    background: linear-gradient(90deg, #6BD8C7, #63B3ED) !important;
+    color: #1e3a8a !important;
+    /* Dark blue text for better readability on cyan/blue */
+}
+
+.btn-appointment:hover {
+    box-shadow: 0 10px 30px rgba(99, 179, 237, 0.5);
+}

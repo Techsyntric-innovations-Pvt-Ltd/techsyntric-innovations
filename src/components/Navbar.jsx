@@ -66,11 +66,11 @@ const Navbar = () => {
                             </>
                         )}
                         <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
-                        <button className="btn btn-primary mobile-btn" onClick={openAppointmentModal}>Book Appointment</button>
+                        <button className="btn btn-primary btn-appointment mobile-btn" onClick={openAppointmentModal}>Book Appointment</button>
                     </div>
 
                     <div className="nav-actions">
-                        <button className="btn btn-primary desktop-btn" onClick={openAppointmentModal}>Book Appointment</button>
+                        <button className="btn btn-primary btn-appointment desktop-btn" onClick={openAppointmentModal}>Book Appointment</button>
                         <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
                             <span></span>
                             <span></span>
