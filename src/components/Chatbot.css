@@ -10,7 +10,8 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    /* background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); */
+    background: linear-gradient(90deg, #6BD8C7, #63B3ED) !important;
     border: none;
     cursor: pointer;
     display: flex;

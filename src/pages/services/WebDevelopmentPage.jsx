@@ -1,11 +1,30 @@
 import React from 'react';
 import './ServicePage.css';
+import './WebDevelopmentHero.css';
 
 const WebDevelopmentPage = () => {
     return (
-        <div className="service-page">
-            <section className="service-hero">
-                <div className="container">
+        <div className="service-page" style={{ paddingTop: 0 }}>
+            <section className="service-hero web-dev-hero-section">
+                {/* Background Video Layer */}
+                <video
+                    className="hero-bg-video"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    poster="/hero-bg-pattern.png" /* This points to the clean image */
+                >
+                    {/* Placeholder for the user's video file */}
+                    <source src="/web-dev-bg.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+
+                {/* Overlay Layer */}
+                <div className="hero-overlay"></div>
+
+                {/* Content Layer */}
+                <div className="service-hero-container">
                     <div className="service-badge">Our Services</div>
                     <h1>Web <span className="text-gradient">Development</span></h1>
                     <p className="service-lead">

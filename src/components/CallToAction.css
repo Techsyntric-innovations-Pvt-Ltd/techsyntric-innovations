@@ -1,0 +1,74 @@
+#call-to-action-isolation.cta-section {
+    background-color: #0B1B32;
+    /* Deep Navy Blue matching the image */
+    color: #ffffff;
+    padding: 3.5rem 2rem;
+    width: 100%;
+}
+
+#call-to-action-isolation .cta-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+#call-to-action-isolation .cta-text h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+
+#call-to-action-isolation .cta-button {
+    background-color: #3b82f6;
+    /* Bright blue */
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+#call-to-action-isolation .cta-button:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+#call-to-action-isolation .cta-button svg {
+    transition: transform 0.3s ease;
+}
+
+#call-to-action-isolation .cta-button:hover svg {
+    transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+    #call-to-action-isolation .cta-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    #call-to-action-isolation .cta-text h2 {
+        font-size: 1.5rem;
+    }
+
+    #call-to-action-isolation .cta-button {
+        width: 100%;
+    }
+}
